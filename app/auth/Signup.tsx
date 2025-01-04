@@ -6,6 +6,9 @@ const Signup = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
+    const handleSubmit = (e: Event) => {
+
+    }
   return (
     <div>
         <Image className='h-full w-full' src={img1} alt='' />
@@ -18,13 +21,23 @@ const Signup = () => {
 
             <fieldset className='flex flex-col'>
                 <label className='font-semibold'>Email</label>
-                <input className='p-3 w-96 bg-white/40 outline-none rounded-md' type="email" />
+                <input 
+                className='p-3 w-96 bg-white/40 outline-none rounded-md' 
+                type="email" 
+                onChange={(e) => setEmail(e.target.value)}
+                />
             </fieldset>
 
             <fieldset className='flex flex-col'>
                 <label className='font-semibold'>Password</label>
-                <input className='p-3 outline-none bg-white/40 w-96 rounded-md' type="password" />
+                <input 
+                className='p-3 outline-none bg-white/40 w-96 rounded-md' 
+                type="password" 
+                onChange={(e) => setPassword(e.target.value)}
+                />
             </fieldset>
+
+            <button className='p-3 rounded-lg'>Submit</button>
         </form>
       </div>
     </div>
